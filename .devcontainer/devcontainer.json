@@ -1,0 +1,29 @@
+{
+  "name": "Laravel 10 - Xray Generator Tracking",
+  "image": "mcr.microsoft.com/devcontainers/php:8.2",
+  "features": {
+    "ghcr.io/devcontainers/features/composer:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "bash setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-php.php-pack",
+        "bmewburn.vscode-intelephense-client",
+        "shufo.vscode-blade-formatter",
+        "xdebug.php-debug",
+        "ms-vscode.remote-repositories"
+      ]
+    }
+  },
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Laravel App",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
